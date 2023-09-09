@@ -7,7 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 const StyledPaper = styled(Paper)`
-  padding: 20px;
+  margin-top: 100px;
   background-color: #fafafa; 
   display: flex;
   flex-direction: column;
@@ -39,7 +39,7 @@ const SocialIcons = styled('div')`
 const ContactComponent = () => {
   return (
     <StyledPaper>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h4" gutterBottom style={{ marginTop: '1rem' }}>
         Contact Me
       </Typography>
       <StyledForm>

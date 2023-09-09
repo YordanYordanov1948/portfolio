@@ -53,7 +53,7 @@ function AboutComponent() {
           </ProfileInfo>
         </Grid>
         <Grid item xs={12} sm={8} md={9}>
-          <Typography variant="h6" gutterBottom style={{ fontSize: '2rem' }}>
+          <Typography variant="h6" gutterBottom style={{ fontSize: '2rem', textAlign: 'center' }}>
             About Me
           </Typography>
           <Typography variant="body1" paragraph>
