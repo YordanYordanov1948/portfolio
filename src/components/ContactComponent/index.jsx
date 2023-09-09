@@ -51,17 +51,17 @@ const ContactComponent = () => {
         </StyledButton>
       </StyledForm>
       <SocialIcons>
-        <IconButton color="primary" component="a" href="https://www.facebook.com/" target="_blank">
-          <FacebookIcon />
-        </IconButton>
-        <IconButton color="primary" component="a" href="https://www.instagram.com/" target="_blank">
-          <InstagramIcon />
-        </IconButton>
-        <IconButton color="primary" component="a" href="https://www.linkedin.com/" target="_blank">
+      <IconButton color="primary" component="a" href="https://www.linkedin.com/in/yordan-yordanov-19185a223/" target="_blank">
           <LinkedInIcon />
         </IconButton>
-        <IconButton color="primary" component="a" href="https://www.github.com/" target="_blank">
+        <IconButton color="primary" component="a" href="https://github.com/YordanYordanov1948?tab=repositories/" target="_blank">
           <GitHubIcon />
+        </IconButton>
+        <IconButton color="primary" component="a" href="https://www.facebook.com/Yordan1948/" target="_blank">
+          <FacebookIcon />
+        </IconButton>
+        <IconButton color="primary" component="a" href="https://www.instagram.com/y_yordanov1/" target="_blank">
+          <InstagramIcon />
         </IconButton>
       </SocialIcons>
     </StyledPaper>
