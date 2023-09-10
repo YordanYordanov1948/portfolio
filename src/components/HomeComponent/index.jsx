@@ -14,22 +14,24 @@ const StyledPaper = styled(Paper)`
   margin-top: 20px;
 `;
 
-
 const Quote = styled(Typography)`
   margin-top: 20px;
   font-style: italic;
+  data-aos="fade-right";
 `;
 
 const HomeComponent = () => {
   return (
-    <StyledPaper>
-      <Typography variant="h1" gutterBottom align="center">
+    <StyledPaper
+      data-aos="zoom-in"
+    >
+      <Typography variant="h1" gutterBottom align="center" data-aos="flip-left" data-aos-delay="100">
         Welcome to My Portfolio
       </Typography>
-      <Typography variant="h4" align="center">
+      <Typography variant="h4" align="center" data-aos="flip-right" data-aos-delay="200">
         A journey through my experiences and accomplishments in the tech world.
       </Typography>
-      <Quote variant="h6" align="center">
+      <Quote variant="h6" align="center" data-aos="fade-up" data-aos-delay="300">
         "Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while." - Steve Jobs
       </Quote>
     </StyledPaper>

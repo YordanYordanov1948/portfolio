@@ -17,6 +17,8 @@ const ProfileImage = styled('img')`
   border-radius: 50%;
   margin-bottom: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  data-aos="zoom-in"
+
 `;
 
 const ProfileInfo = styled('div')`
@@ -24,6 +26,8 @@ const ProfileInfo = styled('div')`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  data-aos="fade-right"
+
 `;
 
 const StyledButton = styled(Button)`
@@ -32,39 +36,41 @@ const StyledButton = styled(Button)`
   &:hover {
     background-color: #1565c0;
   }
+  data-aos="flip-left"
+
 `;
 
 function AboutComponent() {
   return (
-    <StyledPaper>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={4} md={3}>
-          <ProfileInfo>
-            <ProfileImage src={myself} alt="Profile Picture" />
-            <Typography variant="h5" gutterBottom>
-              Yordan Yordanov
-            </Typography>
-            <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-              Front End Developer
-            </Typography>
-            <StyledButton variant="contained" component="a" href="https://www.dropbox.com/scl/fi/f3xdzcbh17oa88rccdlmv/YYCV.pdf?rlkey=dgou3up70892cyclxknukf8fb&dl=1" download>
-              Download Resume
-            </StyledButton>
-          </ProfileInfo>
-        </Grid>
-        <Grid item xs={12} sm={8} md={9}>
-          <Typography variant="h6" gutterBottom style={{ fontSize: '2rem', textAlign: 'center' }}>
-            About Me
+    <StyledPaper data-aos="fade-up">
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={4} md={3}>
+        <ProfileInfo>
+          <ProfileImage src={myself} alt="Profile Picture" />
+          <Typography variant="h5" gutterBottom data-aos="fade-down"> 
+            Yordan Yordanov
           </Typography>
-          <Typography variant="body1" paragraph>
-            Passionate about coding and with a keen eye for detail, I immerse myself in the dynamic world of web development. As a front-end developer and a software engineering student, my journey in the tech sphere has been nothing short of exciting and fulfilling. With each project, I endeavor to deliver optimal, user-centric solutions.
+          <Typography variant="subtitle1" color="textSecondary" gutterBottom data-aos="fade-down" data-aos-delay="100">
+            Front End Developer
           </Typography>
-          <Typography variant="body1" paragraph>
-            In my free time, I enjoy playing video games, listening to music, reading books, and hanging out with friends. I'm looking forward to the new opportunities and challenges that lie ahead!
-          </Typography>
-        </Grid>
+          <StyledButton variant="contained" component="a" href="https://www.dropbox.com/scl/fi/f3xdzcbh17oa88rccdlmv/YYCV.pdf?rlkey=dgou3up70892cyclxknukf8fb&dl=1" download>
+            Download Resume
+          </StyledButton>
+        </ProfileInfo>
       </Grid>
-    </StyledPaper>
+      <Grid item xs={12} sm={8} md={9}>
+        <Typography variant="h6" gutterBottom style={{ fontSize: '2rem', textAlign: 'center' }}>
+          About Me
+        </Typography>
+        <Typography variant="body1" paragraph>
+          Passionate about coding and with a keen eye for detail, I immerse myself in the dynamic world of web development. As a front-end developer and a software engineering student, my journey in the tech sphere has been nothing short of exciting and fulfilling. With each project, I endeavor to deliver optimal, user-centric solutions.
+        </Typography>
+        <Typography variant="body1" paragraph>
+          In my free time, I enjoy playing video games, listening to music, reading books, and hanging out with friends. I'm looking forward to the new opportunities and challenges that lie ahead!
+        </Typography>
+      </Grid>
+    </Grid>
+  </StyledPaper>
   );
 }
 

@@ -29,6 +29,8 @@ const SkillItem = styled(Grid)`
   align-items: center;
   text-align: center;
   margin-bottom: 20px;
+  data-aos="zoom-in";  // Adding AOS animation here
+  data-aos-delay="${props => props.index * 100}";  // Adding staggered delay for each item
 `;
 
 const SkillAvatar = styled(Avatar)`
@@ -39,8 +41,8 @@ const SkillAvatar = styled(Avatar)`
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  width: 50px; /* Adjusted the width */
-  height: 50px; /* Adjusted the height */
+  width: 50px;
+  height: 50px;
 `;
 
 const SkillName = styled(Typography)`
@@ -61,13 +63,13 @@ const PortfolioComponent = () => {
   ];
 
   return (
-    <CenteredContainer>
+    <CenteredContainer data-aos="fade-up">
       <Typography variant="h4" component="div" gutterBottom style={{ color: '#fff', fontSize: '3rem', marginBottom: '20px' }}>
         Skills
       </Typography>
       <SkillsContainer container spacing={2} justifyContent="center">
         {skills.slice(0, 4).map((skill, index) => (
-          <SkillItem item xs={3} key={index}>
+          <SkillItem item xs={3} key={index} index={index}>
             <SkillAvatar>
               <FontAwesomeIcon icon={skill.icon} size="2x" />
             </SkillAvatar>
@@ -75,9 +77,9 @@ const PortfolioComponent = () => {
           </SkillItem>
         ))}
       </SkillsContainer>
-      <SkillsContainer container spacing={2} justifyContent="center">
+      <SkillsContainer container spacing={2} justifyContent="center" data-aos="fade-up" data-aos-delay="200">
         {skills.slice(4, 8).map((skill, index) => (
-          <SkillItem item xs={3} key={index}>
+          <SkillItem item xs={3} key={index} index={index}>
             <SkillAvatar>
               <FontAwesomeIcon icon={skill.icon} size="2x" />
             </SkillAvatar>

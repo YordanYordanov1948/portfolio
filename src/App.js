@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, {useEffect} from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Container } from '@mui/material';
 import HeaderComponent from './components/HeaderComponent';
 import AboutComponent from './components/AboutComponent';
@@ -8,8 +8,18 @@ import Experience from './components/ExperienceComponent';
 import ContactComponent from './components/ContactComponent';
 import HomeComponent from './components/HomeComponent';
 import './styles/main.css'; 
+import AOS from 'aos';
+
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // You can change the value as per your preference
+      once: true, 
+    });
+  }, []);
+
   return (
     <Router>
       <div className='layout'>

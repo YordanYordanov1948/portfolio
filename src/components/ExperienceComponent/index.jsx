@@ -20,10 +20,9 @@ function Experience() {
   };
 
   return (
-    <Grid container spacing={2} justifyContent="center">
+    <Grid container spacing={2} justifyContent="center" data-aos="fade-up">
       <Grid item xs={12} md={8} lg={6}>
-      <Card variant="outlined" sx={{ textAlign: 'center', padding: 2, marginTop: 10 }}>
-
+      <Card variant="outlined" sx={{ textAlign: 'center', padding: 2, marginTop: 10 }} data-aos="fade-in">
           <CardContent>
             <Typography variant="h3" component="div" gutterBottom sx={{ fontSize: '3rem' }}>
               Experience

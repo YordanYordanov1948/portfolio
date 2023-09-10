@@ -1,10 +1,8 @@
+@import '~aos/dist/aos.css';
+
 .layout {
   background-color: #0f0f0f; /* This is a light grey color, you can change it to any color you prefer */
   width: 100%;
   margin: 0;
   padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
 }
