@@ -5,13 +5,15 @@ import AboutComponent from './components/AboutComponent';
 import PortfolioComponent from './components/PortfolioComponent';
 import Experience from './components/ExperienceComponent';
 import ContactComponent from './components/ContactComponent';
+import HomeComponent from './components/HomeComponent';
 import './styles/main.css'; 
 
 function App() {
   return (
     <div className='layout'>
-        <Container maxWidth="xl" style={{ padding: 0, width: '100%' }}>
+        <Container maxWidth={false} sx={{ padding: 0, margin: 0 }}>
           <HeaderComponent />
+          <HomeComponent />
           <AboutComponent />
           <PortfolioComponent />
           <Experience />

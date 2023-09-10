@@ -22,7 +22,8 @@ function Experience() {
   return (
     <Grid container spacing={2} justifyContent="center">
       <Grid item xs={12} md={8} lg={6}>
-        <Card variant="outlined" sx={{ textAlign: 'center', padding: 2 }}>
+      <Card variant="outlined" sx={{ textAlign: 'center', padding: 2, marginTop: 10 }}>
+
           <CardContent>
             <Typography variant="h3" component="div" gutterBottom sx={{ fontSize: '3rem' }}>
               Experience
