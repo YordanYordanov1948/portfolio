@@ -44,14 +44,15 @@ function HeaderComponent() {
   const drawer = (
     <div>
       <List>
-        {['Home', 'About', 'Portfolio', 'Blog', 'Contact'].map((text) => (
-          <ListItem button key={text}>
+      {['Home', 'About', 'Skills', 'Experience', 'Contact'].map((text) => (
+          <ListItem button key={text} component="a" href={`#${text.toLowerCase()}`}>
             <Typography color="inherit" variant="button" style={{ fontWeight: 600 }}>{text}</Typography>
           </ListItem>
         ))}
       </List>
     </div>
   );
+  
 
   return (
     <StyledAppBar position="static">
@@ -71,13 +72,15 @@ function HeaderComponent() {
             </IconButton>
           </Grid>
           <Grid item xs={12} sm={6} md={8} lg={10} display={{ xs: 'none', sm: 'none', md: 'none', lg: 'block' }}>
-            <NavLinks container spacing={2} justifyContent="flex-end">
-              {['Home', 'About', 'Portfolio', 'Blog', 'Contact'].map((text) => (
-                <Grid item key={text}>
-                  <Button color="inherit">{text}</Button>
-                </Grid>
-              ))}
-            </NavLinks>
+          <NavLinks container spacing={2} justifyContent="flex-end">
+          {['Home', 'About', 'Skills', 'Experience', 'Contact'].map((text, index) => (
+            <Grid item key={index}>
+              <Button color="inherit">
+                <a href={`#${text.toLowerCase()}`} style={{ color: 'inherit', textDecoration: 'none' }}>{text}</a>
+              </Button>
+            </Grid>
+          ))}
+        </NavLinks>
           </Grid>
         </Grid>
       </StyledToolbar>

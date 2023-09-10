@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Container } from '@mui/material';
 import HeaderComponent from './components/HeaderComponent';
 import AboutComponent from './components/AboutComponent';
@@ -10,18 +11,31 @@ import './styles/main.css';
 
 function App() {
   return (
-    <div className='layout'>
+    <Router>
+      <div className='layout'>
         <Container maxWidth={false} sx={{ padding: 0, margin: 0 }}>
           <HeaderComponent />
-          <HomeComponent />
-          <AboutComponent />
-          <PortfolioComponent />
-          <Experience />
-          <ContactComponent />
+          <div id="home">
+            <HomeComponent />
+          </div>
+          <div id="about">
+            <AboutComponent />
+          </div>
+          <div id="skills">
+            <PortfolioComponent />
+          </div>
+          <div id="experience">
+            <Experience />
+          </div>
+          <div id="contact">
+            <ContactComponent />
+          </div>
           {/* Other components will go here */}
         </Container>
       </div>
+    </Router>
   );
 }
+
 
 export default App;
