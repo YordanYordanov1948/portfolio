@@ -44,14 +44,21 @@ function HeaderComponent() {
   const drawer = (
     <div>
       <List>
-      {['Home', 'About', 'Skills', 'Experience', 'Contact'].map((text) => (
-          <ListItem button key={text} component="a" href={`#${text.toLowerCase()}`}>
+        {['Home', 'About', 'Skills', 'Experience', 'Contact'].map((text) => (
+          <ListItem 
+            button 
+            key={text} 
+            component="a" 
+            href={`#${text.toLowerCase()}`}
+            onClick={handleDrawerToggle}  // Added this line
+          >
             <Typography color="inherit" variant="button" style={{ fontWeight: 600 }}>{text}</Typography>
           </ListItem>
         ))}
       </List>
     </div>
   );
+  
   
 
   return (
