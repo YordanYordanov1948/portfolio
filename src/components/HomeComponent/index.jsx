@@ -24,6 +24,17 @@ const HomeComponent = () => {
   return (
     <StyledPaper
       data-aos="zoom-in"
+      sx={{
+        '& h1': {
+          fontSize: { xs: '2rem', sm: '3rem' }, // Responsive font size
+          marginBottom: '20px',
+          transition: 'font-size 0.3s ease-in-out',
+        },
+        '& h4': {
+          fontSize: { xs: '1.5rem', sm: '2rem' }, // Responsive font size
+          transition: 'font-size 0.3s ease-in-out',
+        },
+      }}
     >
       <Typography variant="h1" gutterBottom align="center" data-aos="flip-left" data-aos-delay="100">
         Welcome to My Portfolio
