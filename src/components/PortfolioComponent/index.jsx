@@ -1,54 +1,11 @@
 import React from 'react';
-import { Grid, Typography, Box, Avatar } from '@mui/material';
-import { styled } from '@mui/system';
+import { Typography } from '@mui/material';
+import { CenteredContainer, SkillsContainer, SkillItem, SkillAvatar, SkillName } from './StyledPortfolioComponents';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaravel, faCss3, faHtml5, faJs, faReact, faSass } from '@fortawesome/free-brands-svg-icons';
 import { faServer, faDatabase } from '@fortawesome/free-solid-svg-icons';
 
-const CenteredContainer = styled(Box)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #121212;
-  padding: 20px;
-`;
-
-const SkillsContainer = styled(Grid)`
-  margin-top: 20px;
-  width: 100%;
-  @media (min-width: 600px) {
-    width: 50%;
-  }
-`;
-
-const SkillItem = styled(Grid)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 20px;
-  data-aos="zoom-in";  // Adding AOS animation here
-  data-aos-delay="${props => props.index * 100}";  // Adding staggered delay for each item
-`;
-
-const SkillAvatar = styled(Avatar)`
-  background-color: #f0f0f0;
-  color: #000;
-  margin: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  width: 50px;
-  height: 50px;
-`;
-
-const SkillName = styled(Typography)`
-  margin-top: 5px;
-  color: #fff; 
-`;
 
 const PortfolioComponent = () => {
   const skills = [

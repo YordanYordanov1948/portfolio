@@ -1,44 +1,7 @@
 import React from 'react';
-import { Grid, Typography, Paper, Button } from '@mui/material';
-import { styled } from '@mui/system';
-import myself from '../../assets/myself.jpg'
+import { StyledPaper, ProfileImage, ProfileInfo, StyledButton } from './StyledAboutComponent';
+import { Grid, Typography } from '@mui/material';
 
-const StyledPaper = styled(Paper)`
-  padding: 20px;
-  background-color: #fafafa; 
-  margin: 20px 0; 
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-`;
-
-const ProfileImage = styled('img')`
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  data-aos="zoom-in"
-
-`;
-
-const ProfileInfo = styled('div')`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  data-aos="fade-right"
-
-`;
-
-const StyledButton = styled(Button)`
-  background-color: #1976d2;
-  color: #fff;
-  &:hover {
-    background-color: #1565c0;
-  }
-  data-aos="flip-left"
-
-`;
 
 function AboutComponent() {
   return (
@@ -46,7 +9,7 @@ function AboutComponent() {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={4} md={3}>
         <ProfileInfo>
-          <ProfileImage src={myself} alt="Profile Picture" />
+        <ProfileImage src="https://imgur.com/vyIE1bF.jpg" alt="Profile Picture" /> 
           <Typography variant="h5" gutterBottom data-aos="fade-down"> 
             Yordan Yordanov
           </Typography>

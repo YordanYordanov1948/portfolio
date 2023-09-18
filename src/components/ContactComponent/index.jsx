@@ -1,42 +1,12 @@
 import React, {useState} from 'react';
-import { Paper, Typography, TextField, Button, IconButton } from '@mui/material';
-import { styled } from '@mui/system';
+import { StyledPaper, StyledForm, StyledButton, SocialIcons } from './StyledContactComponents';
+import {Typography, TextField, IconButton } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import emailjs from 'emailjs-com';
 
-
-const StyledPaper = styled(Paper)`
-  margin-top: 100px;
-  background-color: #fafafa; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const StyledForm = styled('form')`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 50%;
-  max-width: 500px;
-  margin-top: 20px;
-`;
-
-const StyledButton = styled(Button)`
-  align-self: center;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 10px 20px;
-`;
-
-const SocialIcons = styled('div')`
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-`;
 
 const ContactComponent = () => {
 

@@ -7,6 +7,7 @@ import PortfolioComponent from './components/PortfolioComponent';
 import Experience from './components/ExperienceComponent';
 import ContactComponent from './components/ContactComponent';
 import HomeComponent from './components/HomeComponent';
+import ProjectsComponent from './components/ProjectsComponet';
 import './styles/main.css'; 
 import AOS from 'aos';
 
@@ -33,6 +34,9 @@ function App() {
           </div>
           <div id="skills">
             <PortfolioComponent />
+          </div>
+          <div id="projects">
+            <ProjectsComponent />
           </div>
           <div id="experience">
             <Experience />

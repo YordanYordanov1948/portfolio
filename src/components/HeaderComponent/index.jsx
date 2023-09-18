@@ -1,38 +1,9 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography, Button, Grid, IconButton, Drawer, List, ListItem } from '@mui/material';
+import { Typography, Button, Grid, IconButton, Drawer, List, ListItem } from '@mui/material';
+import { StyledAppBar, StyledToolbar, Logo, NavLinks } from './StyledHeaderComponents';
 
 import MenuIcon from '@mui/icons-material/Menu';
-import { styled } from '@mui/system';
 
-const StyledAppBar = styled(AppBar)`
-  background-color: #000000;
-  box-shadow: none;
-`;
-
-const StyledToolbar = styled(Toolbar)`
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-`;
-
-const Logo = styled(Typography)`
-  font-weight: bold;
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 1.3rem;
-`;
-
-const NavLinks = styled(Grid)`
-  .MuiButton-root {
-    text-transform: none;
-    color: #ffffff;
-    font-weight: 600;
-    border-radius: 8px;
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-  }
-`;
 
 function HeaderComponent() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -41,21 +12,29 @@ function HeaderComponent() {
     setMobileOpen(!mobileOpen);
   };
 
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: 'smooth' });
+  };
+  
+
   const drawer = (
     <div>
       <List>
-        {['Home', 'About', 'Skills', 'Experience', 'Contact'].map((text, index) => (
-          <ListItem 
-            button 
-            key={text} 
-            component="a" 
-            href={`#${text.toLowerCase()}`}
-            onClick={handleDrawerToggle}
-            data-aos="fade-up"  // Adding AOS animation here
-            data-aos-delay={`${index * 100}`} // Adding a delay to create a staggered animation effect
-          >
-            <Typography color="inherit" variant="button" style={{ fontWeight: 600 }}>{text}</Typography>
-          </ListItem>
+        {['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact'].map((text, index) => (
+         <ListItem 
+         button 
+         key={text} 
+         onClick={() => { 
+           handleScroll(text.toLowerCase());
+           handleDrawerToggle();
+         }}
+         data-aos="fade-up"
+         data-aos-delay={`${index * 100}`}
+       >
+         <Typography color="inherit" variant="button" style={{ fontWeight: 600 }}>{text}</Typography>
+       </ListItem>
+       
         ))}
       </List>
     </div>
@@ -82,10 +61,10 @@ function HeaderComponent() {
           </Grid>
           <Grid item xs={12} sm={6} md={8} lg={10} display={{ xs: 'none', sm: 'none', md: 'none', lg: 'block' }}>
           <NavLinks container spacing={2} justifyContent="flex-end">
-          {['Home', 'About', 'Skills', 'Experience', 'Contact'].map((text, index) => (
+          {['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact'].map((text, index) => (
             <Grid item key={index} data-aos="fade-in" data-aos-delay={`${index * 100}`}>
-              <Button color="inherit">
-                <a href={`#${text.toLowerCase()}`} style={{ color: 'inherit', textDecoration: 'none' }}>{text}</a>
+             <Button color="inherit" onClick={() => handleScroll(text.toLowerCase())}>
+                  <span style={{ color: 'inherit', textDecoration: 'none' }}>{text}</span>
               </Button>
             </Grid>
           ))}
